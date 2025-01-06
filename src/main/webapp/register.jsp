@@ -30,13 +30,14 @@
         <div class="signin">
             <h1>Create Your Account!</h1>
             <h3>Join our community and start sharing or borrowing vehicles today!</h3>
-            <form action="#" id="registrationform" novalidate>
-                <input type="text" placeholder="Enter your full name">
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Enter your phone number ">
+            <form action="UserRegServlet" method="post" id="registrationform" novalidate>
+                <input type="text" placeholder="Enter your full name" name="fullname">
+                <input type="email" placeholder="Enter your email" name="email">
+                <input type="text" placeholder="Enter your phone number " name="phone">
                 <input type="password" placeholder="Create a strong password">
                 <input type="password" placeholder="Re-enter your password">
-                <input type="text" placeholder="Enter your full address (optional)">
+                <input type="date" placeholder="Enter you Date Of Birth" name="dob">
+                <% String errorMessage = (String) request.getAttribute("errorMessage"); %> <% if (errorMessage != null) { %> <div style="color: red;"> <%= errorMessage %> </div> <% } %>
             </form>
             <div id="tnc">
                 <input type="checkbox" id="terms">
