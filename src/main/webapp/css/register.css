@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Wix Madefor Display", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("http://localhost:8084/Binqew/backgrounds/g8.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    position: sticky;
+    background: #d5efd6;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    color: #3B4820;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav li {
+    margin: 0 1.2rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #3B4820;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+
+.navbar ul li button {
+    background-color: #50C878;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: none;
+    transition: all 0.3s ease;
+    width: 158.37px;
+    height: 45px;
+
+}
+
+.navbar ul li button:hover {
+    background-color: #ACE2BB;
+    color: black;
+    cursor: pointer;
+}
+
+.menubtn {
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #3B4820;
+    cursor: pointer;
+}
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+}
+
+.signin {
+    padding: 2rem;
+    background-color: rgba(213, 239, 214, 0.3);
+    backdrop-filter: blur(8px);
+    box-shadow: -50px 60px 100px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin h1 {
+    font-size: 2.5rem;
+    font-weight: 570;
+    color: #3B4820;
+    margin-bottom: 1rem;
+}
+
+.signin h3 {
+    font-size: 1rem;
+    color: #3B4820;
+    margin-bottom: 1.5rem;
+}
+
+.signin button {
+    background-color: rgba(172, 226, 187, 0.3);
+    box-shadow: 3px 7px 80px 0px rgba(0, 0, 0, 0.05);
+    border: none;
+}
+
+.signin button:hover {
+    background-color: #ACE2BB;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3B4820;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.button svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: black;
+}
+
+.signin input {
+    background-color: transparent;
+    margin: 10px 0;
+    border: 2px solid #3B4820;
+    font-size: 1rem;
+    color: #3B4820;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.signin input::placeholder {
+    color: rgba(59, 72, 32, 0.7);
+}
+
+.signin p {
+    color: #3B4820;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.signin p a {
+    color: #3B4820;
+    text-decoration: underline;
+}
+
+#tnc{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 386px;
+}
+
+#tnc p{
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+#terms{
+    width: 15px;
+    height: 15px;
+    margin:0 10px;
+    cursor: pointer;
+}
+
+#click {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar .menubtn {
+        display: block;
+    }
+
+    #click:checked~.menubtn i::before {
+        content: "\f00d";
+    }
+
+    .navbar {
+        height: 80px;
+        padding: 0 25px;
+        z-index: 1;
+    }
+
+
+    .navbar ul {
+        z-index: -1;
+        position: fixed;
+        top: 79px;
+        left: -100%;
+        background-color: #d5efd6;
+        height: 100vh;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar ul li {
+        margin: 40px 0;
+    }
+
+    .navbar ul li a {
+        display: block;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    .signin {
+        padding: 1.5rem;
+        border-radius: 45px;
+    }
+
+    .signin h1 {
+        font-size: 3rem;
+    }
+
+    .signin h3 {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        height: 45px;
+    }
+
+    #nextbt,
+    #forgetpswd {
+        font-size: 1rem;
+        height: 45px;
+    }
+}
