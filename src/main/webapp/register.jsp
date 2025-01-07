@@ -44,7 +44,7 @@
                 <span class="checkmark"></span>
                 <p>By signing up, you agree to the <a>Terms of Service</a> and <a href="#">Privacy Policy</a>, including <a href="#">Cookie Use</a>.</p>
             </div>
-            <button type="submit" class="button">Register Now</button>
+            <button type="submit" class="button" name="registerbt" value="register">Register Now</button>
             <p>Already have an account? <a href="signin.jsp">Login</a></p>
 
         </div>

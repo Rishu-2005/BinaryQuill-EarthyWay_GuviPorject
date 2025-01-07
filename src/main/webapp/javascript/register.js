@@ -60,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        if (isValid) {
+       /* if (isValid) {
             alert('Form submitted successfully!');
             form.reset(); // Clear the form after submission
-        }
+        }*/
     });
 
     // Utility functions

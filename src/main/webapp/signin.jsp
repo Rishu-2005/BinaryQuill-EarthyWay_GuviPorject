@@ -70,7 +70,10 @@
 				<input id="username" type="text" name="username" placeholder="Username/Email/Phone">
 				<input id="password" type="password" name="password" placeholder="Password">
 				<button id="nextbt" type="submit" name="loginbt">Login</button>
-				<% String errorMessage = (String) request.getAttribute("errorMessage"); %> <% if (errorMessage != null) { %> <div style="color: red;"> <%= errorMessage %> </div> <% } %>
+				<%-- <% String errorMessage = (String) request.getAttribute("errorMessage"); %> <% if (errorMessage != null) { %> <div style="color: red;"> <%= errorMessage %> </div> <% } %> --%>
+				<% if (request.getAttribute("error") != null) { %>
+    <p style="color:red;"><%= request.getAttribute("error") %></p>
+<% } %>
 				<button id="forgetpswd">Forgot Password?</button>
 			</form>
 
