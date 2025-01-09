@@ -5,9 +5,9 @@ import com.database.model.RidesData;
 import java.sql.*;
 
 public class RidesDAO{
-    private static final String URL= "jdbc:mysql://localhost:3306/EarthyWay";
+    private static final String URL= "jdbc:mysql://localhost:3306/?user=root";
     private static final String USER = "root";
-    private static final String PASSWORD = "rishu005";
+    private static final String PASSWORD = "sumit1012397";
 
     public void addrider(RidesData rides) {
 

@@ -5,9 +5,9 @@ import com.database.model.DriverData;
 import java.sql.*;
 
 public class DriverDAO {
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/EarthyWay";
+    private static final String URL = "jdbc:mysql://localhost:3306/?user=root";
     private static final String USER = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "sumit1012397";
 
 
     public void addDriver(DriverData driver) {

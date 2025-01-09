@@ -94,9 +94,9 @@ import java.sql.SQLException;
 
 public class AccountDAO {
 
-    private String jdbcURL = "jdbc:mysql://localhost:3306/your_database_name";
-    private String jdbcUsername = "db_user";
-    private String jdbcPassword = "db_password";
+    private String jdbcURL = "jdbc:mysql://localhost:3306/?user=root";
+    private String jdbcUsername = "root";
+    private String jdbcPassword = "sumit1012397";
 
     private static final String INSERT_USER_SQL = "INSERT INTO users (firstname, midname, lastname, email, phone, dob, passwd) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
