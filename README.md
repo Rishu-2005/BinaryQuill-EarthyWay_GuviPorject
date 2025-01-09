@@ -128,8 +128,3 @@ Solution:
 -	Enhanced AI features for better route planning and fleet optimization.
 
 -	Development of solar-powered charging docks.
-
-9.	Contact Us
-
-Support Email: 
-Website: 
